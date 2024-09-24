@@ -97,6 +97,10 @@ void setup() {
   fram.readObject(66, Resistor2);
   fram.readObject(70, Lens3FL);
   fram.readObject(74, Resistor3);
+  fram.readObject(78, Lens4FL);
+  fram.readObject(82, Resistor4);
+  fram.readObject(86, Lens5FL);
+  fram.readObject(90, Resistor5);
   storeDefaultsFirstRun();
   //Set pin modes
   pcf.pinMode(enaPin, OUTPUT);
