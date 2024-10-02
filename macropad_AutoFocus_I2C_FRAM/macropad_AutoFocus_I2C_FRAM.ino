@@ -260,10 +260,15 @@ void loop() {
     pixels.setBrightness(6);
   }
 
-  for (int i = 0; i < pixels.numPixels(); i++) {
+  for (int i = 4; i < pixels.numPixels(); i++) {
     pixels.setPixelColor(i, Wheel(((i * 256 / pixels.numPixels()) + j) & 255));
   }
-
+  
+  pixels.setPixelColor(0, 0xFF0000); // make 1st key red
+  pixels.setPixelColor(1, 0xFFFF00); // make 2nd key yellow
+  pixels.setPixelColor(2, 0x008000); // make 3rd key green
+  pixels.setPixelColor(3, 0x0000FF); // make 4th key blue 
+   
   stepperDelay = map(MotorSpeed, 1, 10, 10000, 5) + 1000;
 
   for (int i = 1; i <= 12; i++) {
